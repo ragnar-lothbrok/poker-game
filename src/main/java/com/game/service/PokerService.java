@@ -11,9 +11,10 @@ import com.game.utility.PokerHandValidationUtility;
 public class PokerService {
 
     public String calculateRank(String[] cards) throws PokerException {
-        if (cards.length != 5) {
+        if (cards == null || cards.length != 5) {
             throw new PokerException("Can only add 5 cards");
         } else {
+            PokerHandValidationUtility.validate(cards);
             PokerHand pokerHand = new PokerHand();
             for (int i = 0; i < cards.length; i++) {
                 char cardSuit = cards[i].trim().charAt(0);

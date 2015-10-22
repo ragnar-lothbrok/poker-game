@@ -1,0 +1,2 @@
+1. You can run MainClass.java
+2. You can run PokerTest.java class

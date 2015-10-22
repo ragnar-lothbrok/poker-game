@@ -16,5 +16,13 @@ public class PokerHandValidationUtility {
         
         
     }
+
+    public static void validate(String[] cards) throws PokerException {
+        for(int i=0;i<cards.length;i++){
+            if(cards[i].trim().length() != 2){
+                throw new PokerException("Invalid cards");
+            }
+        }
+    }
     
 }
